@@ -5,7 +5,7 @@ namespace apbd_cw6.Models;
 
 public class Room
 {
-    public int id { get; set; }
+    public int Id { get; set; }
     
     [Required (ErrorMessage = "Name is required")]
     public string Name { get; set; }

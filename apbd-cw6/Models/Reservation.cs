@@ -4,7 +4,7 @@ namespace apbd_cw6.Models;
 
 public class Reservation
 {
-    public int id { get; set; }
+    public int Id { get; set; }
     
     [Required]
     public int RoomId { get; set; }
@@ -13,15 +13,15 @@ public class Reservation
     public string OrganizerName { get; set; }
     
     [Required(ErrorMessage ="Topic is required")]
-    public string TopicName { get; set; }
+    public string Topic { get; set; }
     
     [Required]
     public DateTime Date { get; set; }
     
     [Required]
-    public DateTime StartTime { get; set; }
+    public TimeSpan StartTime { get; set; }
     [Required]
-    public DateTime EndTime { get; set; }
+    public TimeSpan EndTime { get; set; }
 
     public string Status { get; set; } = "planned";
 
