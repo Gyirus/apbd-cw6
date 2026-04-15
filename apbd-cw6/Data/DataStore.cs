@@ -22,14 +22,71 @@ public class DataStore
 
         Reservations = new List<Reservation>
         {
-            new Reservation { Id = _nextReservationId++, RoomId = 1, OrganizerName = "Jan Kowalski", Topic = "Opening Ceremony", Date = new DateTime(2026,5,10), StartTime = TimeSpan.Parse("09:00:00"), EndTime = TimeSpan.Parse("11:00:00"), Status = "confirmed" },
-            new Reservation { Id = _nextReservationId++, RoomId = 2, OrganizerName = "Anna Nowak", Topic = "C# Workshop", Date = new DateTime(2026,5,10), StartTime = TimeSpan.Parse("10:00:00"), EndTime = TimeSpan.Parse("13:00:00"), Status = "planned" },
-            new Reservation { Id = _nextReservationId++, RoomId = 1, OrganizerName = "Piotr Wiśniewski", Topic = "Lunch Break", Date = new DateTime(2026,5,10), StartTime = TimeSpan.Parse("12:00:00"), EndTime = TimeSpan.Parse("13:30:00"), Status = "confirmed" },
-            new Reservation { Id = _nextReservationId++, RoomId = 3, OrganizerName = "Ewa Zielińska", Topic = "Design Thinking", Date = new DateTime(2026,5,11), StartTime = TimeSpan.Parse("14:00:00"), EndTime = TimeSpan.Parse("17:00:00"), Status = "confirmed" },
-            new Reservation { Id = _nextReservationId++, RoomId = 2, OrganizerName = "Tomasz Lewandowski", Topic = "Code Review", Date = new DateTime(2026,5,12), StartTime = TimeSpan.Parse("09:30:00"), EndTime = TimeSpan.Parse("11:00:00"), Status = "cancelled" }
+            new Reservation 
+            { 
+                Id = _nextReservationId++, 
+                RoomId = 1, 
+                OrganizerName = "Jan Kowalski", 
+                Topic = "Opening Ceremony", 
+                Date = new DateTime(2026, 5, 10), 
+                StartTime = TimeSpan.Parse("09:00"), 
+                EndTime = TimeSpan.Parse("11:00"), 
+                Status = "confirmed" 
+            },
+            new Reservation 
+            { 
+                Id = _nextReservationId++, 
+                RoomId = 2, 
+                OrganizerName = "Anna Nowak", 
+                Topic = "C# Workshop", 
+                Date = new DateTime(2026, 5, 10), 
+                StartTime = TimeSpan.Parse("10:00"), 
+                EndTime = TimeSpan.Parse("13:00"), 
+                Status = "planned" 
+            },
+            new Reservation 
+            { 
+                Id = _nextReservationId++, 
+                RoomId = 1, 
+                OrganizerName = "Piotr Wiśniewski", 
+                Topic = "Lunch Break", 
+                Date = new DateTime(2026, 5, 10), 
+                StartTime = TimeSpan.Parse("12:00"), 
+                EndTime = TimeSpan.Parse("13:30"), 
+                Status = "confirmed" 
+            },
+            new Reservation 
+            { 
+                Id = _nextReservationId++, 
+                RoomId = 3, 
+                OrganizerName = "Ewa Zielińska", 
+                Topic = "Design Thinking", 
+                Date = new DateTime(2026, 5, 11), 
+                StartTime = TimeSpan.Parse("14:00"), 
+                EndTime = TimeSpan.Parse("17:00"), 
+                Status = "confirmed" 
+            },
+            new Reservation 
+            { 
+                Id = _nextReservationId++, 
+                RoomId = 2, 
+                OrganizerName = "Tomasz Lewandowski", 
+                Topic = "Code Review", 
+                Date = new DateTime(2026, 5, 12), 
+                StartTime = TimeSpan.Parse("09:30"), 
+                EndTime = TimeSpan.Parse("11:00"), 
+                Status = "cancelled" 
+            }
         };
     }
 
-    public static int GetNextRoomId() => ++_nextRoomId;
-    public static int GetNextReservationId() => ++_nextReservationId;
+    public static int GetNextRoomId()
+    {
+        return ++_nextRoomId;
+    }
+
+    public static int GetNextReservationId()
+    {
+        return ++_nextReservationId;
+    }
 }
